@@ -39,6 +39,41 @@ body {
     flex-direction: column;
 }
 
+#note-app main {
+    position: relative;
+
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 200px 250px auto;
+    grid-template-rows: calc(100vh - 3em);
+    grid-template-areas: "categories notes editor";
+}
+
+.custom-radio {
+    position: relative;
+}
+
+.custom-radio:hover {
+    cursor: pointer;
+}
+
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+.custom-radio label {
+    cursor: pointer;
+    display: block;
+    padding: .5em 2.5em .5em .75em;
+}
+
+.custom-radio:hover label {
+    background-color: rgba(239, 187, 0, 0.08);
+}
+
+.custom-radio input[type="radio"]:checked ~ label {
+    background-color: #f5eea9;
+}
 
 .input-field {
     background-color: transparent;
